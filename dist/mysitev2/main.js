@@ -27,7 +27,7 @@ webpackEmptyAsyncContext.id = "./src/$$_lazy_route_resource lazy recursive";
 /*!****************************!*\
   !*** ./src/app/actions.ts ***!
   \****************************/
-/*! exports provided: GOTO_BIO_PAGE, GOTO_CONNECT_PAGE, GOTO_LANDING_PAGE, GOTO_MUN_PAGE */
+/*! exports provided: GOTO_BIO_PAGE, GOTO_CONNECT_PAGE, GOTO_LANDING_PAGE */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -35,11 +35,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "GOTO_BIO_PAGE", function() { return GOTO_BIO_PAGE; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "GOTO_CONNECT_PAGE", function() { return GOTO_CONNECT_PAGE; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "GOTO_LANDING_PAGE", function() { return GOTO_LANDING_PAGE; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "GOTO_MUN_PAGE", function() { return GOTO_MUN_PAGE; });
 var GOTO_BIO_PAGE = 'GOTO_BIO_PAGE';
 var GOTO_CONNECT_PAGE = 'GOTO_CONNECT_PAGE';
 var GOTO_LANDING_PAGE = 'GOTO_LANDING_PAGE';
-var GOTO_MUN_PAGE = 'GOTO_MUN_PAGE';
 
 
 /***/ }),
@@ -362,7 +360,7 @@ module.exports = "a {\n    color: white;\n    text-decoration: inherit;\n}\n\nh2
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"bio-page-container full-page\">\n  <img\n    alt=\"Background image\"\n    class=\"bio-page-bg full-page\"\n    (load)=\"onBgLoad()\"\n    [ngClass]=\"{bgLoaded: bgLoaded}\"\n    [src]=\"bgURL\" />\n  <div\n    alt=\"Background image\"\n    class=\"bio-page-bg-overlay full-page\"\n    [ngClass]=\"{overlayFadeOut: bgLoaded}\">\n</div>\n<p \n    class=\"picture-credits\"\n    [ngClass]=\"{fadeInPhotoCredits: bgLoaded}\"\n    [style.display]=\"bgLoaded ? 'block' : 'none'\">\n    Photography by\n    <a [href]='photographerURL'>{{photographerName}}</a>\n    on\n    <a href=\"https://unsplash.com\">Unsplash</a>\n  </p>\n  <div class=\"bio-text-container\">\n    <h2 class=\"bio-text-element\">About Me</h2>\n    <p class=\"bio-text-element\">\n      Hi, I'm Nick. I work as a software engineer.\n      <br><br>\n      Interests: Immunology, writing, Italian food.\n    </p>\n  </div>\n</div>\n"
+module.exports = "<div class=\"bio-page-container full-page\">\n  <img\n    alt=\"Background image\"\n    class=\"bio-page-bg full-page\"\n    (load)=\"onBgLoad()\"\n    [ngClass]=\"{bgLoaded: bgLoaded}\"\n    [src]=\"bgURL\" />\n  <div\n    alt=\"Background image\"\n    class=\"bio-page-bg-overlay full-page\"\n    [ngClass]=\"{overlayFadeOut: bgLoaded}\">\n</div>\n<p \n    class=\"picture-credits\"\n    [ngClass]=\"{fadeInPhotoCredits: bgLoaded}\"\n    [style.display]=\"bgLoaded ? 'block' : 'none'\">\n    Photography by\n    <a [href]='photographerURL'>{{photographerName}}</a>\n    on\n    <a href=\"https://unsplash.com\">Unsplash</a>\n  </p>\n  <div class=\"bio-text-container\">\n    <h2 class=\"bio-text-element\">About Me</h2>\n    <p class=\"bio-text-element\">\n      Hi, I'm Nick. I work as a software engineer.\n      <br><br>\n      Interests: Medical research, writing, Italian food.\n    </p>\n  </div>\n</div>\n"
 
 /***/ }),
 
@@ -571,7 +569,7 @@ var BioPageComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "svg {\n    width: 15vw;\n    max-width: 138px;\n    height: auto;\n\n    opacity: .72;\n    user-drag: none; \n    user-select: none;\n    -moz-user-select: none;\n    -webkit-user-drag: none;\n    -webkit-user-select: none;\n    -ms-user-select: none;\n}\n\n.connect-container {\n    display: flex;\n    justify-content: space-around;\n    align-items: center;\n    padding: 12px;\n}\n\n@media (max-width: 800px) {\n    svg {\n        -webkit-filter: invert(80%);\n                filter: invert(80%);\n        opacity: 1;\n    }\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvY29ubmVjdC1wYWdlL2Nvbm5lY3QtcGFnZS5jb21wb25lbnQuY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0lBQ0ksV0FBVztJQUNYLGdCQUFnQjtJQUNoQixZQUFZOztJQUVaLFlBQVk7SUFDWixlQUFlO0lBQ2YsaUJBQWlCO0lBQ2pCLHNCQUFzQjtJQUN0Qix1QkFBdUI7SUFDdkIseUJBQXlCO0lBQ3pCLHFCQUFxQjtBQUN6Qjs7QUFFQTtJQUNJLGFBQWE7SUFDYiw2QkFBNkI7SUFDN0IsbUJBQW1CO0lBQ25CLGFBQWE7QUFDakI7O0FBRUE7SUFDSTtRQUNJLDJCQUFtQjtnQkFBbkIsbUJBQW1CO1FBQ25CLFVBQVU7SUFDZDtBQUNKIiwiZmlsZSI6InNyYy9hcHAvY29ubmVjdC1wYWdlL2Nvbm5lY3QtcGFnZS5jb21wb25lbnQuY3NzIiwic291cmNlc0NvbnRlbnQiOlsic3ZnIHtcbiAgICB3aWR0aDogMTV2dztcbiAgICBtYXgtd2lkdGg6IDEzOHB4O1xuICAgIGhlaWdodDogYXV0bztcblxuICAgIG9wYWNpdHk6IC43MjtcbiAgICB1c2VyLWRyYWc6IG5vbmU7IFxuICAgIHVzZXItc2VsZWN0OiBub25lO1xuICAgIC1tb3otdXNlci1zZWxlY3Q6IG5vbmU7XG4gICAgLXdlYmtpdC11c2VyLWRyYWc6IG5vbmU7XG4gICAgLXdlYmtpdC11c2VyLXNlbGVjdDogbm9uZTtcbiAgICAtbXMtdXNlci1zZWxlY3Q6IG5vbmU7XG59XG5cbi5jb25uZWN0LWNvbnRhaW5lciB7XG4gICAgZGlzcGxheTogZmxleDtcbiAgICBqdXN0aWZ5LWNvbnRlbnQ6IHNwYWNlLWFyb3VuZDtcbiAgICBhbGlnbi1pdGVtczogY2VudGVyO1xuICAgIHBhZGRpbmc6IDEycHg7XG59XG5cbkBtZWRpYSAobWF4LXdpZHRoOiA4MDBweCkge1xuICAgIHN2ZyB7XG4gICAgICAgIGZpbHRlcjogaW52ZXJ0KDgwJSk7XG4gICAgICAgIG9wYWNpdHk6IDE7XG4gICAgfVxufSJdfQ== */"
+module.exports = "svg {\n    width: 15vw;\n    max-width: 138px;\n    height: auto;\n\n    opacity: .72;\n    user-drag: none; \n    user-select: none;\n    -moz-user-select: none;\n    -webkit-user-drag: none;\n    -webkit-user-select: none;\n    -ms-user-select: none;\n}\n\n.connect-container {\n    display: flex;\n    justify-content: space-around;\n    align-items: center;\n    padding: 12px;\n}\n\n@media (max-width: 800px) {\n    svg {\n        filter: invert(80%);\n        opacity: 1;\n    }\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvY29ubmVjdC1wYWdlL2Nvbm5lY3QtcGFnZS5jb21wb25lbnQuY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0lBQ0ksV0FBVztJQUNYLGdCQUFnQjtJQUNoQixZQUFZOztJQUVaLFlBQVk7SUFDWixlQUFlO0lBQ2YsaUJBQWlCO0lBQ2pCLHNCQUFzQjtJQUN0Qix1QkFBdUI7SUFDdkIseUJBQXlCO0lBQ3pCLHFCQUFxQjtBQUN6Qjs7QUFFQTtJQUNJLGFBQWE7SUFDYiw2QkFBNkI7SUFDN0IsbUJBQW1CO0lBQ25CLGFBQWE7QUFDakI7O0FBRUE7SUFDSTtRQUNJLG1CQUFtQjtRQUNuQixVQUFVO0lBQ2Q7QUFDSiIsImZpbGUiOiJzcmMvYXBwL2Nvbm5lY3QtcGFnZS9jb25uZWN0LXBhZ2UuY29tcG9uZW50LmNzcyIsInNvdXJjZXNDb250ZW50IjpbInN2ZyB7XG4gICAgd2lkdGg6IDE1dnc7XG4gICAgbWF4LXdpZHRoOiAxMzhweDtcbiAgICBoZWlnaHQ6IGF1dG87XG5cbiAgICBvcGFjaXR5OiAuNzI7XG4gICAgdXNlci1kcmFnOiBub25lOyBcbiAgICB1c2VyLXNlbGVjdDogbm9uZTtcbiAgICAtbW96LXVzZXItc2VsZWN0OiBub25lO1xuICAgIC13ZWJraXQtdXNlci1kcmFnOiBub25lO1xuICAgIC13ZWJraXQtdXNlci1zZWxlY3Q6IG5vbmU7XG4gICAgLW1zLXVzZXItc2VsZWN0OiBub25lO1xufVxuXG4uY29ubmVjdC1jb250YWluZXIge1xuICAgIGRpc3BsYXk6IGZsZXg7XG4gICAganVzdGlmeS1jb250ZW50OiBzcGFjZS1hcm91bmQ7XG4gICAgYWxpZ24taXRlbXM6IGNlbnRlcjtcbiAgICBwYWRkaW5nOiAxMnB4O1xufVxuXG5AbWVkaWEgKG1heC13aWR0aDogODAwcHgpIHtcbiAgICBzdmcge1xuICAgICAgICBmaWx0ZXI6IGludmVydCg4MCUpO1xuICAgICAgICBvcGFjaXR5OiAxO1xuICAgIH1cbn0iXX0= */"
 
 /***/ }),
 
@@ -1076,7 +1074,6 @@ var NavigationService = /** @class */ (function () {
     function NavigationService(ngRedux) {
         var _this = this;
         this.ngRedux = ngRedux;
-        this.munCode = 0;
         this.pageChange = this.page$.subscribe(function (x) { _this.pageString = x; });
         var keyUp$ = Object(rxjs__WEBPACK_IMPORTED_MODULE_2__["fromEvent"])(document.body, 'keyup');
         var mouseClick$ = Object(rxjs__WEBPACK_IMPORTED_MODULE_2__["fromEvent"])(document.body, 'click');
@@ -1084,18 +1081,7 @@ var NavigationService = /** @class */ (function () {
         this.userAction = Object(rxjs__WEBPACK_IMPORTED_MODULE_2__["merge"])(keyUp$, mouseClick$, touch$)
             .pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["debounceTime"])(500))
             .subscribe(function (e) {
-            if (e.key != null) {
-                if (e.key === 'm' && _this.munCode === 0
-                    || e.key === 'u' && _this.munCode === 1) {
-                    _this.munCode++;
-                    return;
-                }
-                else if (e.key === 'n' && _this.munCode === 2) {
-                    _this.ngRedux.dispatch({ type: _actions__WEBPACK_IMPORTED_MODULE_4__["GOTO_MUN_PAGE"] });
-                    return;
-                }
-            }
-            else if (_this.pageString === _store__WEBPACK_IMPORTED_MODULE_5__["PAGE"].LANDING) {
+            if (_this.pageString === _store__WEBPACK_IMPORTED_MODULE_5__["PAGE"].LANDING) {
                 _this.ngRedux.dispatch({ type: _actions__WEBPACK_IMPORTED_MODULE_4__["GOTO_BIO_PAGE"] });
             }
             else {
@@ -1144,7 +1130,6 @@ var PAGE;
     PAGE["BIO"] = "BIO";
     PAGE["CONNECT"] = "CONNECT";
     PAGE["LANDING"] = "LANDING";
-    PAGE["MUN"] = "MUN";
 })(PAGE || (PAGE = {}));
 ;
 function rootReducer(state, action) {
@@ -1155,9 +1140,6 @@ function rootReducer(state, action) {
             return { page: PAGE.CONNECT };
         case _actions__WEBPACK_IMPORTED_MODULE_0__["GOTO_LANDING_PAGE"]:
             return { page: PAGE.LANDING };
-        case _actions__WEBPACK_IMPORTED_MODULE_0__["GOTO_MUN_PAGE"]:
-            window.location.href = "https://nicholashartunian.com/projects/MUNGen/";
-            return { page: PAGE.MUN };
     }
     return state;
 }

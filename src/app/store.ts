@@ -1,11 +1,10 @@
-import { GOTO_BIO_PAGE, GOTO_CONNECT_PAGE, GOTO_LANDING_PAGE, GOTO_MUN_PAGE } from './actions';
+import { GOTO_BIO_PAGE, GOTO_CONNECT_PAGE, GOTO_LANDING_PAGE } from './actions';
 
 // TypeScript enum
 export enum PAGE {
     BIO = 'BIO',
     CONNECT = 'CONNECT',
     LANDING = 'LANDING',
-    MUN = 'MUN'
 };
 
 
@@ -21,9 +20,6 @@ export function rootReducer(state: IAppState, action): IAppState {
             return { page: PAGE.CONNECT };
         case GOTO_LANDING_PAGE:
             return { page: PAGE.LANDING };
-        case GOTO_MUN_PAGE:
-            window.location.href="https://nicholashartunian.com/projects/MUNGen/";
-            return { page: PAGE.MUN };
     }
     return state;
 }

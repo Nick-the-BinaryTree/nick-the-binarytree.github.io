@@ -1,4 +1,3 @@
 export const GOTO_BIO_PAGE = 'GOTO_BIO_PAGE';
 export const GOTO_CONNECT_PAGE = 'GOTO_CONNECT_PAGE';
 export const GOTO_LANDING_PAGE = 'GOTO_LANDING_PAGE';
-export const GOTO_MUN_PAGE = 'GOTO_MUN_PAGE';
